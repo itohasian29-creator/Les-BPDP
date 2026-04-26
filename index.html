@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SawitScholar - Bimbingan Beasiswa</title>
+    <title>SawitScholar - Bimbingan Beasiswa BPDPKS</title>
     
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,6 +16,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -23,20 +24,21 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-2">
                     <i data-lucide="graduation-cap" class="h-8 w-8 text-emerald-600"></i>
                     <span class="font-bold text-xl text-emerald-900">SawitScholar</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden lg:flex space-x-6 text-sm font-medium">
                     <a href="#keunggulan" class="text-slate-600 hover:text-emerald-600 transition-colors">Keunggulan</a>
+                    <a href="#jalur" class="text-slate-600 hover:text-emerald-600 transition-colors">Jalur Pendaftaran</a>
+                    <a href="#kampus" class="text-slate-600 hover:text-emerald-600 transition-colors">Kampus</a>
                     <a href="#program" class="text-slate-600 hover:text-emerald-600 transition-colors">Program</a>
-                    <a href="#mentor" class="text-slate-600 hover:text-emerald-600 transition-colors">Mentor</a>
                     <a href="#faq" class="text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
                 </div>
                 <div>
-                    <a href="#program" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg">
+                    <a href="https://forms.gle/nBmPbmbNskPZ3a926" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg">
                         Daftar Sekarang
                     </a>
                 </div>
@@ -52,21 +54,21 @@
         
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-8">
-                <div class="inline-block px-4 py-1.5 bg-emerald-800/50 border border-emerald-400/30 rounded-full text-emerald-300 font-medium text-sm backdrop-blur-sm">
-                    ✨ Dibimbing langsung oleh Awardee 2023
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-800/50 border border-emerald-400/30 rounded-full text-emerald-300 font-medium text-sm backdrop-blur-sm">
+                    <i data-lucide="sparkles" class="h-4 w-4 text-amber-400"></i> Bimbingan Lolos Beasiswa SDM Sawit
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                     Wujudkan Mimpimu <span class="text-amber-400">Kuliah Gratis</span> & Berkarir di Industri Sawit!
                 </h1>
                 <p class="text-lg md:text-xl text-emerald-100/90 leading-relaxed max-w-xl">
-                    Dampingi persiapanmu meraih Beasiswa SDM Sawit (BPDPKS). Kami sediakan panduan lengkap dari seleksi administrasi, TPA, hingga simulasi wawancara.
+                    Sinergi gerak, cipta prestasi bersama program bimbingan intensif kami. Kami siap mendampingimu menembus ketatnya seleksi Beasiswa BPDPKS dari awal hingga akhir.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#program" class="bg-amber-500 text-amber-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/30 text-center flex items-center justify-center gap-2">
-                        Daftar Kelas Sekarang <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    <a href="https://forms.gle/nBmPbmbNskPZ3a926" target="_blank" class="bg-amber-500 text-amber-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/30 text-center flex items-center justify-center gap-2">
+                        Amankan Kursi Sekarang <i data-lucide="arrow-right" class="h-5 w-5"></i>
                     </a>
-                    <a href="#keunggulan" class="bg-emerald-800/50 border border-emerald-500 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all text-center backdrop-blur-sm">
-                        Pelajari Program Kami
+                    <a href="#jalur" class="bg-emerald-800/50 border border-emerald-500 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all text-center backdrop-blur-sm">
+                        Pelajari Program
                     </a>
                 </div>
             </div>
@@ -77,7 +79,7 @@
                 <div class="relative bg-emerald-100 rounded-3xl border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] flex items-center justify-center">
                     <div class="text-center p-8">
                         <i data-lucide="users" class="h-24 w-24 text-emerald-700 mx-auto mb-4 opacity-50"></i>
-                        <p class="text-emerald-800 font-semibold text-lg">[Visual: Foto mentor/awardee 2023 berlatar kebun sawit]</p>
+                        <p class="text-emerald-800 font-semibold text-lg">[Visual: Foto mentor/awardee 2023 berlatar kebun sawit/rektorat]</p>
                     </div>
                 </div>
                 
@@ -85,8 +87,8 @@
                 <div class="absolute -left-6 top-12 bg-white text-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
                     <div class="bg-green-100 p-2 rounded-full"><i data-lucide="check-circle-2" class="h-6 w-6 text-green-600"></i></div>
                     <div>
-                        <p class="text-xs text-slate-500 font-bold uppercase">Terbukti</p>
-                        <p class="font-bold">Materi Valid 2023</p>
+                        <p class="text-xs text-slate-500 font-bold uppercase">Awardee 2023</p>
+                        <p class="font-bold">Mentor Berpengalaman</p>
                     </div>
                 </div>
             </div>
@@ -94,234 +96,226 @@
     </section>
 
     <!-- Value Proposition -->
-    <section id="keunggulan" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="keunggulan" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-100">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mengapa Harus Ikut Kelas Ini?</h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Pendekatan komprehensif yang dirancang khusus untuk memaksimalkan peluangmu lolos beasiswa.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mengapa Harus Ikut Bimbingan Ini?</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Kegagalan pelamar sering terjadi pada tahap administrasi karena salah strategi. Kami hadir untuk menutup celah tersebut.</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all group">
-                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all">
+                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="clipboard-check" class="h-7 w-7 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Review Berkas Ketat</h3>
+                    <p class="text-slate-600 leading-relaxed">Berkas administrasimu akan di-review secara ketat dan teliti oleh mentor sebelum diunggah final ke portal beasiswa.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all">
+                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="target" class="h-7 w-7 text-emerald-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Materi Tepat Sasaran</h3>
-                    <p class="text-slate-600 leading-relaxed">Kurikulum dirancang khusus berdasarkan pengalaman nyata menghadapi tes Beasiswa SDM Sawit tahun 2023.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Simulasi Sesuai Standar</h3>
+                    <p class="text-slate-600 leading-relaxed">Dapatkan simulasi Tes Potensi Akademik (TPA) dan simulasi wawancara yang disesuaikan dengan standar tes asli BPDPKS.</p>
                 </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all group">
-                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="award" class="h-7 w-7 text-emerald-600"></i>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all">
+                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="h-7 w-7 text-emerald-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Mentor Awardee 2023</h3>
-                    <p class="text-slate-600 leading-relaxed">Belajar langsung dari praktisi yang sudah melewati ketatnya persaingan dan kini menikmati bangku kuliah.</p>
-                </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all group">
-                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="map" class="h-7 w-7 text-emerald-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Bedah Jalur & Kuota</h3>
-                    <p class="text-slate-600 leading-relaxed">Tips jitu memilih kampus dan jurusan (spt. Pengelolaan Perkebunan) dengan peluang lolos tertinggi.</p>
-                </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all group">
-                    <div class="bg-emerald-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="globe" class="h-7 w-7 text-emerald-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Networking Industri</h3>
-                    <p class="text-slate-600 leading-relaxed">Dapatkan gambaran relasi, ikatan dinas (MoU), dan prospek karir di perusahaan kelapa sawit ternama.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Modul Esensial Industri</h3>
+                    <p class="text-slate-600 leading-relaxed">Bukan hanya persiapan tes, kamu juga dibekali modul esensi seputar industri sawit nasional untuk bekal wawancara & kuliah.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Reminder -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-emerald-50">
+    <!-- Jalur Pendaftaran -->
+    <section id="jalur" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div class="max-w-6xl mx-auto">
-            <div class="bg-emerald-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute right-0 top-0 w-64 h-64 bg-emerald-800 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <div class="lg:w-1/3 sticky top-24">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">6 Jalur Pendaftaran Resmi</h2>
+                    <p class="text-slate-600 mb-6">Sesuai dengan ketentuan resmi portal beasiswa, kami akan membantu memetakan profilmu agar cocok dengan salah satu dari jalur berikut ini.</p>
+                    <a href="https://beasiswasdmsawit.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700">
+                        Kunjungi beasiswasdmsawit.id <i data-lucide="external-link" class="h-4 w-4"></i>
+                    </a>
+                </div>
                 
-                <div class="grid lg:grid-cols-5 gap-8 items-center relative z-10">
-                    <div class="lg:col-span-2 text-white">
-                        <h2 class="text-3xl font-bold mb-4">Ingat Tujuan Besarmu!</h2>
-                        <p class="text-emerald-100 mb-6">Jika kamu lolos beasiswa bergengsi ini, inilah yang akan langsung kamu dapatkan:</p>
-                    </div>
-                    <div class="lg:col-span-3">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <!-- Benefits Item -->
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Biaya Pendidikan (UKT) Full Ditanggung</span>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Uang Saku & Uang Buku per semester</span>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Biaya Transportasi PP (Rumah - Kampus)</span>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Sertifikasi Kompetensi</span>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Magang di Perusahaan Sawit</span>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-start gap-3">
-                                <div class="bg-amber-400 rounded-full p-1 mt-0.5 flex-shrink-0">
-                                    <i data-lucide="check" class="h-4 w-4 text-emerald-900 stroke-[3]"></i>
-                                </div>
-                                <span class="text-white font-medium">Peluang Karir Lulusan yang Cerah</span>
-                            </div>
+                <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+                    <!-- Jalur 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-amber-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="leaf" class="h-6 w-6 text-amber-600"></i>
                         </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Pekebun & Keluarga</h3>
+                        <p class="text-sm text-slate-600">Diperuntukkan bagi pekebun kelapa sawit, atau suami/istri/anak dari pekebun.</p>
+                    </div>
+                    <!-- Jalur 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Karyawan/Pekerja</h3>
+                        <p class="text-sm text-slate-600">Bagi kamu yang terjun dan bekerja langsung di usaha perkebunan kelapa sawit.</p>
+                    </div>
+                    <!-- Jalur 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Keluarga Karyawan</h3>
+                        <p class="text-sm text-slate-600">Jalur khusus untuk suami/istri/anak dari karyawan/buruh di usaha perkebunan sawit.</p>
+                    </div>
+                    <!-- Jalur 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="building-2" class="h-6 w-6 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Pengurus Kelembagaan</h3>
+                        <p class="text-sm text-slate-600">Untuk kamu yang aktif dalam koperasi atau kelompok tani kelapa sawit.</p>
+                    </div>
+                    <!-- Jalur 5 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="network" class="h-6 w-6 text-orange-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Pengurus Asosiasi</h3>
+                        <p class="text-sm text-slate-600">Khusus bagi pengurus asosiasi yang bergerak secara resmi di sektor kelapa sawit.</p>
+                    </div>
+                    <!-- Jalur 6 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="bg-slate-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="h-6 w-6 text-slate-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">ASN / PPPK</h3>
+                        <p class="text-sm text-slate-600">Bagi aparatur negara yang bertugas langsung di bidang perkelapasawitan.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing / Programs -->
-    <section id="program" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-5xl mx-auto">
+    <!-- Kampus Mitra Section -->
+    <section id="kampus" class="py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900 text-white overflow-hidden relative">
+        <!-- Background Decor -->
+        <div class="absolute right-0 top-0 w-96 h-96 bg-emerald-800 rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute left-0 bottom-0 w-96 h-96 bg-emerald-700 rounded-full blur-3xl opacity-30 translate-y-1/2 -translate-x-1/3"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Pilih Program Persiapanmu</h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Investasi kecil untuk masa depan pendidikan dan karir yang gemilang.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Destinasi Kuliahmu</h2>
+                <p class="text-emerald-100 max-w-2xl mx-auto text-lg">Beasiswa ini bekerjasama dengan <strong>lebih dari 40 perguruan tinggi</strong> vokasi dan akademik di seluruh Indonesia. Berikut kampus mitra unggulannya:</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Paket 1: Wawancara (Basic) -->
-                <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col hover:border-emerald-300 hover:shadow-xl transition-all">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Kelas Wawancara</h3>
-                        <p class="text-slate-500">Khusus untuk kamu yang lolos tahap akhir.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
+                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="building" class="h-6 w-6 text-amber-400"></i>
                     </div>
-                    <div class="mb-6 pb-6 border-b border-slate-100">
-                        <span class="text-4xl font-extrabold text-slate-900">Rp 79.000</span>
+                    <h3 class="font-bold text-xl mb-2">Politeknik LPP Yogyakarta</h3>
+                    <p class="text-emerald-100 text-sm leading-relaxed">Kampus favorit pencetak tenaga ahli profesional. Unggulan: D4 Pengelolaan Perkebunan, D3 Budidaya Tanaman, D2 Perawatan Mesin.</p>
+                </div>
+                
+                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
+                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400"></i>
                     </div>
-                    <ul class="space-y-4 mb-8 flex-1">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-slate-600">Materi Kunci Menjawab Pertanyaan</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-slate-600">Live Simulasi Wawancara 1-on-1</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-slate-600">Feedback & Evaluasi Personal</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-slate-600">Recording Simulasi</span>
-                        </li>
-                    </ul>
-                    <button onclick="alert('Ini akan membuka link pendaftaran / WhatsApp!')" class="w-full py-4 rounded-xl font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors border border-emerald-200">
-                        Pilih Paket Wawancara
-                    </button>
+                    <h3 class="font-bold text-xl mb-2">ITSI Medan</h3>
+                    <p class="text-emerald-100 text-sm leading-relaxed">Institut Teknologi Sawit Indonesia (ITSI). Fokus penuh pada pengembangan sains & teknologi kelapa sawit di Sumatera.</p>
                 </div>
 
-                <!-- Paket 2: Intensif (Recomended) -->
-                <div class="bg-emerald-900 rounded-3xl p-8 flex flex-col relative transform md:-translate-y-4 shadow-2xl border border-emerald-700">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-400 text-amber-950 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                        🌟 PALING DIREKOMENDASIKAN
+                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
+                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="book" class="h-6 w-6 text-amber-400"></i>
                     </div>
-                    <div class="mb-6 mt-2">
-                        <h3 class="text-2xl font-bold text-white mb-2">Kelas Intensif</h3>
-                        <p class="text-emerald-200">Persiapan komplit dari awal hingga akhir.</p>
+                    <h3 class="font-bold text-xl mb-2">Poltek Kelapa Sawit CWE</h3>
+                    <p class="text-emerald-100 text-sm leading-relaxed">Citra Widya Edukasi (CWE) Bekasi. Pilihan yang sangat tepat di Jawa Barat untuk pendidikan vokasi industri sawit.</p>
+                </div>
+
+                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
+                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="map-pin" class="h-6 w-6 text-amber-400"></i>
                     </div>
-                    <div class="mb-6 pb-6 border-b border-emerald-800">
-                        <div class="text-emerald-400 line-through text-lg font-medium mb-1">Rp 250.000</div>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-5xl font-extrabold text-white">Rp 149.000</span>
-                        </div>
+                    <h3 class="font-bold text-xl mb-2">Politeknik Kampar</h3>
+                    <p class="text-emerald-100 text-sm leading-relaxed">Berada di Provinsi Riau. Kampus strategis yang berlokasi tepat di jantung pusat industri sawit Sumatera.</p>
+                </div>
+
+                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
+                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="award" class="h-6 w-6 text-amber-400"></i>
                     </div>
-                    <ul class="space-y-4 mb-8 flex-1">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Bedah Persyaratan Administrasi & Berkas</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Materi & Latihan Soal TPA</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Tips Psikotes & Menggambar</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Live Simulasi Wawancara 1-on-1</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Review Dokumen Personal</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                            <span class="text-emerald-50">Grup Diskusi & Konsultasi 24/7</span>
-                        </li>
-                    </ul>
-                    <button onclick="alert('Ini akan membuka link pendaftaran / WhatsApp!')" class="w-full py-4 rounded-xl font-bold text-emerald-900 bg-amber-400 hover:bg-amber-300 transition-colors shadow-lg shadow-amber-400/20">
-                        Pilih Paket Intensif
-                    </button>
+                    <h3 class="font-bold text-xl mb-2">Sekolah Vokasi IPB</h3>
+                    <p class="text-emerald-100 text-sm leading-relaxed">Menyediakan program agribisnis dan teknologi pertanian yang sudah diakui kualitasnya di tingkat nasional maupun internasional.</p>
+                </div>
+
+                <div class="bg-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 border-dashed rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+                    <i data-lucide="plus-circle" class="h-10 w-10 text-emerald-400 mb-3 opacity-70"></i>
+                    <h3 class="font-bold text-lg mb-1">Dan Puluhan Kampus Lainnya</h3>
+                    <p class="text-emerald-200 text-sm">Tersebar dari Aceh hingga Papua!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mentors Section -->
-    <section id="mentor" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-y border-slate-200">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Kenalan dengan Mentor Kamu</h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Belajar langsung dari mereka yang sudah membuktikan diri lolos seleksi.</p>
+    <!-- Pricing / Program Premium -->
+    <section id="program" class="py-24 px-4 sm:px-6 lg:px-8 bg-amber-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Investasi Masa Depan</h2>
+                <p class="text-lg text-slate-600">Cukup bayar satu kali (One-Time Payment) untuk bimbingan penuh sampai tuntas pengumuman!</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Mentor 1 -->
-                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 relative mt-12 md:mt-0">
-                    <div class="absolute -top-12 left-8 w-24 h-24 bg-emerald-100 rounded-full border-4 border-white shadow-lg flex items-center justify-center overflow-hidden">
-                        <i data-lucide="users" class="h-10 w-10 text-emerald-500"></i>
-                    </div>
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold text-slate-900">Budi Santoso</h3>
-                        <p class="text-emerald-600 font-medium mb-4">Awardee 2023 | Politeknik Kelapa Sawit</p>
-                        <div class="bg-slate-50 rounded-2xl p-5 relative">
-                            <span class="text-4xl text-slate-300 absolute -top-2 left-2 font-serif">"</span>
-                            <p class="text-slate-600 italic relative z-10 pt-2 pl-4">
-                                Fokus pada pemahaman teknis dan kesiapan mental. Saya akan bantu kamu membedah strategi lolos di kampus vokasi unggulan.
-                            </p>
-                        </div>
-                    </div>
+            <div class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-amber-200 max-w-2xl mx-auto relative">
+                <div class="absolute top-0 right-0 bg-amber-400 text-amber-950 px-6 py-2 rounded-bl-3xl rounded-tr-[2.5rem] font-bold text-sm shadow-md">
+                    🌟 KELAS INTENSIF
                 </div>
-
-                <!-- Mentor 2 -->
-                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 relative mt-16 md:mt-0">
-                    <div class="absolute -top-12 left-8 w-24 h-24 bg-amber-100 rounded-full border-4 border-white shadow-lg flex items-center justify-center overflow-hidden">
-                        <i data-lucide="users" class="h-10 w-10 text-amber-500"></i>
+                
+                <div class="p-10 md:p-12">
+                    <div class="mb-2">
+                        <h3 class="text-2xl font-bold text-slate-900">Bimbingan Beasiswa SDM Sawit</h3>
+                        <p class="text-slate-500 mt-2">Dapatkan panduan komplit dari tahap persiapan berkas administrasi hingga lolos seleksi akhir.</p>
                     </div>
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold text-slate-900">Siti Aminah</h3>
-                        <p class="text-emerald-600 font-medium mb-4">Awardee 2023 | Institut Pertanian Bogor</p>
-                        <div class="bg-slate-50 rounded-2xl p-5 relative">
-                            <span class="text-4xl text-slate-300 absolute -top-2 left-2 font-serif">"</span>
-                            <p class="text-slate-600 italic relative z-10 pt-2 pl-4">
-                                Ahli dalam taktik wawancara dan administrasi berkas. Kesalahan kecil di administrasi bisa berakibat fatal, mari pastikan berkasmu sempurna!
-                            </p>
+                    
+                    <div class="my-8 pb-8 border-b border-slate-100">
+                        <span class="text-slate-500 font-medium">Hanya</span>
+                        <div class="flex items-baseline gap-2 mt-1">
+                            <span class="text-5xl md:text-6xl font-extrabold text-emerald-700">Rp 2.000.000</span>
                         </div>
                     </div>
+                    
+                    <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="gift" class="h-5 w-5 text-amber-500"></i> Fasilitas yang kamu dapatkan:
+                    </h4>
+                    
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
+                            <span class="text-slate-700">Mentoring eksklusif pengisian berkas dan strategi pemilihan jalur pendaftaran.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
+                            <span class="text-slate-700">Simulasi Tes Potensi Akademik (TPA) dan Wawancara standar BPDPKS.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
+                            <span class="text-slate-700">Modul materi esensial seputar industri sawit nasional.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
+                            <span class="text-slate-700">Grup diskusi dan jaringan pendampingan 24/7 bersama Awardee.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
+                            <span class="text-slate-700 font-semibold">Review berkas administrasi sebelum submit final (Finalisasi).</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://forms.gle/nBmPbmbNskPZ3a926" target="_blank" class="w-full py-5 rounded-2xl font-bold text-lg text-emerald-950 bg-amber-400 hover:bg-amber-500 transition-all shadow-xl shadow-amber-400/30 flex justify-center items-center gap-2">
+                        Daftar Bimbingan Sekarang <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                    <p class="text-center text-sm text-slate-500 mt-4 flex items-center justify-center gap-1">
+                        <i data-lucide="lock" class="h-3 w-3"></i> Kuota terbatas demi menjaga kualitas mentoring.
+                    </p>
                 </div>
             </div>
         </div>
@@ -331,43 +325,68 @@
     <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Pertanyaan yang Sering Diajukan</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions (FAQ)</h2>
+                <p class="text-slate-600">Pertanyaan yang sering diajukan seputar program beasiswa dan bimbingan.</p>
             </div>
 
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
                     <button class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 focus:outline-none" onclick="toggleFaq(1)">
-                        <span class="font-bold text-slate-800 text-lg">Apakah kelas ini menjamin 100% lolos?</span>
-                        <i data-lucide="chevron-down" id="icon-down-1" class="h-6 w-6 text-slate-400"></i>
-                        <i data-lucide="chevron-up" id="icon-up-1" class="h-6 w-6 text-emerald-600 hidden"></i>
+                        <span class="font-bold text-slate-800 text-lg pr-4">Apakah biaya les Rp 2.000.000 dibayar per bulan atau sekali bayar?</span>
+                        <i data-lucide="chevron-down" id="icon-down-1" class="h-6 w-6 text-slate-400 flex-shrink-0"></i>
+                        <i data-lucide="chevron-up" id="icon-up-1" class="h-6 w-6 text-emerald-600 hidden flex-shrink-0"></i>
                     </button>
                     <div id="content-1" class="px-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-                        <p class="text-slate-600 leading-relaxed pb-6">Kami tidak bisa menjamin 100%, namun kami memberikan formulasi, strategi, dan soal yang paling mendekati tes asli untuk memaksimalkan peluangmu. Persiapan yang matang adalah kunci utama keberhasilan.</p>
+                        <p class="text-slate-600 leading-relaxed pb-6">Biaya tersebut adalah sistem sekali bayar (One-Time Payment). Kamu akan dibimbing secara penuh mulai dari pendaftaran dibuka hingga masa pengumuman hasil seleksi selesai.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
                     <button class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 focus:outline-none" onclick="toggleFaq(2)">
-                        <span class="font-bold text-slate-800 text-lg">Metode belajarnya seperti apa?</span>
-                        <i data-lucide="chevron-down" id="icon-down-2" class="h-6 w-6 text-slate-400"></i>
-                        <i data-lucide="chevron-up" id="icon-up-2" class="h-6 w-6 text-emerald-600 hidden"></i>
+                        <span class="font-bold text-slate-800 text-lg pr-4">Apa saja yang di-cover oleh Beasiswa SDM Sawit ini?</span>
+                        <i data-lucide="chevron-down" id="icon-down-2" class="h-6 w-6 text-slate-400 flex-shrink-0"></i>
+                        <i data-lucide="chevron-up" id="icon-up-2" class="h-6 w-6 text-emerald-600 hidden flex-shrink-0"></i>
                     </button>
                     <div id="content-2" class="px-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-                        <p class="text-slate-600 leading-relaxed pb-6">Kelas dilakukan secara online via Zoom/Google Meet agar interaktif, dan kami juga menyediakan grup diskusi intensif via WhatsApp/Telegram untuk tanya jawab di luar jam kelas.</p>
+                        <p class="text-slate-600 leading-relaxed pb-6">Sangat komplit! Jika lolos, beasiswa ini menanggung penuh biaya pendidikan (UKT/SPP), biaya asrama/kost, uang saku bulanan, uang buku, transportasi PP (rumah ke kampus), magang di perusahaan, biaya wisuda, hingga sertifikasi kompetensi.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
                     <button class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 focus:outline-none" onclick="toggleFaq(3)">
-                        <span class="font-bold text-slate-800 text-lg">Kapan kelas dimulai?</span>
-                        <i data-lucide="chevron-down" id="icon-down-3" class="h-6 w-6 text-slate-400"></i>
-                        <i data-lucide="chevron-up" id="icon-up-3" class="h-6 w-6 text-emerald-600 hidden"></i>
+                        <span class="font-bold text-slate-800 text-lg pr-4">Orang tua saya buruh tani kebun sawit (bukan pemilik), apakah bisa mendaftar?</span>
+                        <i data-lucide="chevron-down" id="icon-down-3" class="h-6 w-6 text-slate-400 flex-shrink-0"></i>
+                        <i data-lucide="chevron-up" id="icon-up-3" class="h-6 w-6 text-emerald-600 hidden flex-shrink-0"></i>
                     </button>
                     <div id="content-3" class="px-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-                        <p class="text-slate-600 leading-relaxed pb-6">Batch 1 akan segera dimulai pada awal bulan depan. Mengingat kuota sangat terbatas untuk menjaga efektivitas belajar, kami sarankan Anda untuk mendaftar secepatnya.</p>
+                        <p class="text-slate-600 leading-relaxed pb-6">Tentu saja bisa! Beasiswa ini sangat terbuka lebar untuk buruh tani dan karyawan kebun. Kamu bisa memilih mendaftar melalui jalur "Keluarga Karyawan/Pekerja pada Usaha Perkebunan Kelapa Sawit" dengan melampirkan surat keterangan kerja orang tua.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
+                    <button class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 focus:outline-none" onclick="toggleFaq(4)">
+                        <span class="font-bold text-slate-800 text-lg pr-4">Apa yang membuat bimbingan ini berbeda dari belajar mandiri?</span>
+                        <i data-lucide="chevron-down" id="icon-down-4" class="h-6 w-6 text-slate-400 flex-shrink-0"></i>
+                        <i data-lucide="chevron-up" id="icon-up-4" class="h-6 w-6 text-emerald-600 hidden flex-shrink-0"></i>
+                    </button>
+                    <div id="content-4" class="px-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
+                        <p class="text-slate-600 leading-relaxed pb-6">Kegagalan terbesar pelamar beasiswa sering terjadi pada tahap administrasi karena ketidaktelitian berkas dan salah memilih jalur. Di sini, berkasmu akan di-review secara ketat oleh mentor sebelum diunggah, ditambah dengan tryout yang disesuaikan dengan standar tes akademik BPDPKS.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
+                    <button class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 focus:outline-none" onclick="toggleFaq(5)">
+                        <span class="font-bold text-slate-800 text-lg pr-4">Bagaimana jika saya bingung cara finalisasi pendaftaran?</span>
+                        <i data-lucide="chevron-down" id="icon-down-5" class="h-6 w-6 text-slate-400 flex-shrink-0"></i>
+                        <i data-lucide="chevron-up" id="icon-up-5" class="h-6 w-6 text-emerald-600 hidden flex-shrink-0"></i>
+                    </button>
+                    <div id="content-5" class="px-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
+                        <p class="text-slate-600 leading-relaxed pb-6">Jangan khawatir! Tim mentor kami akan mendampingi proses pengisian di portal <em>beasiswasdmsawit.id</em> secara langsung (via Zoom/Google Meet) untuk memastikan tidak ada data wajib yang terlewat sebelum akun kamu difinalisasi.</p>
                     </div>
                 </div>
             </div>
@@ -378,13 +397,13 @@
     <footer class="bg-slate-900 text-slate-300 pt-20 pb-10 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
-                Kuota Terbatas! Jangan sampai kesempatan emasmu tahun ini terlewat.
+                Ambil Langkah Pertamamu Sekarang!
             </h2>
             <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-                Persiapkan dirimu sekarang bersama ahlinya. Ratusan pendaftar bersaing untuk beasiswa ini. Pastikan kamu selangkah lebih maju.
+                Ratusan pendaftar bersaing untuk mendapatkan beasiswa ini. Investasikan usahamu bersama ahlinya dan pastikan kamu selangkah lebih maju dari peserta lain.
             </p>
-            <a href="#program" class="inline-block bg-amber-500 text-amber-950 px-10 py-5 rounded-full font-bold text-xl hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20">
-                Amankan Kursi Saya Sekarang!
+            <a href="https://forms.gle/nBmPbmbNskPZ3a926" target="_blank" class="inline-block bg-amber-500 text-amber-950 px-10 py-5 rounded-full font-bold text-xl hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20">
+                Daftar Bimbingan Sekarang
             </a>
         </div>
 
@@ -404,7 +423,7 @@
         <div class="max-w-6xl mx-auto text-center mt-10 text-sm text-slate-500">
             <p class="mb-2">© 2024 Bimbingan Beasiswa SawitScholar.</p>
             <p class="max-w-3xl mx-auto">
-                <strong>Disclaimer:</strong> Program ini merupakan inisiatif independen dari sekumpulan Awardee 2023 yang bertujuan untuk mementoring dan membantu calon mahasiswa. Program ini bukan merupakan perwakilan resmi dari panitia pelaksana.
+                <strong>Disclaimer:</strong> Program ini merupakan inisiatif independen dari sekumpulan Awardee yang bertujuan untuk mementoring dan membantu calon mahasiswa. Program ini bukan merupakan perwakilan resmi dari panitia pelaksana BPDPKS.
             </p>
         </div>
     </footer>
@@ -414,22 +433,36 @@
         // Inisialisasi Icons
         lucide.createIcons();
 
-        // Script untuk mengatur buka-tutup FAQ
+        // Script untuk mengatur buka-tutup FAQ dinamis
         function toggleFaq(id) {
             const content = document.getElementById('content-' + id);
             const iconDown = document.getElementById('icon-down-' + id);
             const iconUp = document.getElementById('icon-up-' + id);
 
             if (content.classList.contains('max-h-0')) {
+                // Tutup FAQ lain jika ingin akordion tunggal (Opsional)
+                // for(let i=1; i<=5; i++) {
+                //     if(i !== id) closeFaq(i);
+                // }
+
                 // Buka FAQ
                 content.classList.remove('max-h-0');
-                content.classList.add('max-h-48', 'pt-4', 'border-t', 'border-slate-100');
+                content.classList.add('max-h-64', 'pt-4', 'border-t', 'border-slate-100');
                 iconDown.classList.add('hidden');
                 iconUp.classList.remove('hidden');
             } else {
-                // Tutup FAQ
+                closeFaq(id);
+            }
+        }
+
+        function closeFaq(id) {
+            const content = document.getElementById('content-' + id);
+            const iconDown = document.getElementById('icon-down-' + id);
+            const iconUp = document.getElementById('icon-up-' + id);
+            
+            if(content) {
                 content.classList.add('max-h-0');
-                content.classList.remove('max-h-48', 'pt-4', 'border-t', 'border-slate-100');
+                content.classList.remove('max-h-64', 'pt-4', 'border-t', 'border-slate-100');
                 iconDown.classList.remove('hidden');
                 iconUp.classList.add('hidden');
             }
