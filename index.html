@@ -205,57 +205,424 @@
         <div class="absolute left-0 bottom-0 w-96 h-96 bg-emerald-700 rounded-full blur-3xl opacity-30 translate-y-1/2 -translate-x-1/3"></div>
         
         <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/20 border border-amber-400/50 rounded-full text-amber-400 font-medium text-sm mb-4">
+                    <i data-lucide="calendar" class="h-4 w-4"></i> Daftar Kampus Mitra 2025
+                </div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Destinasi Kuliahmu</h2>
-                <p class="text-emerald-100 max-w-2xl mx-auto text-lg">Beasiswa ini bekerjasama dengan <strong>lebih dari 40 perguruan tinggi</strong> vokasi dan akademik di seluruh Indonesia. Berikut kampus mitra unggulannya:</p>
+                <p class="text-emerald-100 max-w-2xl mx-auto text-lg">Jelajahi puluhan kampus mitra Beasiswa SDM Sawit tahun 2025. <br><span class="text-amber-300 font-medium text-sm sm:text-base">Pilih kategori untuk melihat daftar kampus yang tersedia.</span></p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
-                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="building" class="h-6 w-6 text-amber-400"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">Politeknik LPP Yogyakarta</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed">Kampus favorit pencetak tenaga ahli profesional. Unggulan: D4 Pengelolaan Perkebunan, D3 Budidaya Tanaman, D2 Perawatan Mesin.</p>
-                </div>
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button id="btn-ptn" onclick="openTab('ptn')" class="tab-btn bg-amber-500 text-amber-950 font-bold px-6 py-2.5 rounded-full text-sm transition-all shadow-md">🏫 PTN & Kedinasan</button>
+                <button id="btn-unggulan" onclick="openTab('unggulan')" class="tab-btn bg-emerald-800/50 text-emerald-100 hover:bg-emerald-700 border border-emerald-600 px-6 py-2.5 rounded-full text-sm font-medium transition-all backdrop-blur-sm">🌟 Kampus Unggulan</button>
+                <button id="btn-vokasi" onclick="openTab('vokasi')" class="tab-btn bg-emerald-800/50 text-emerald-100 hover:bg-emerald-700 border border-emerald-600 px-6 py-2.5 rounded-full text-sm font-medium transition-all backdrop-blur-sm">⚙️ Kampus "Cepat Kerja"</button>
+                <button id="btn-swasta" onclick="openTab('swasta')" class="tab-btn bg-emerald-800/50 text-emerald-100 hover:bg-emerald-700 border border-emerald-600 px-6 py-2.5 rounded-full text-sm font-medium transition-all backdrop-blur-sm">🏢 Swasta Potensial</button>
+            </div>
+
+            <!-- Tab Contents Container -->
+            <div class="max-w-5xl mx-auto min-h-[400px]">
                 
-                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
-                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400"></i>
+                <!-- TAB 1: PTN & Kedinasan -->
+                <div id="tab-ptn" class="tab-pane block">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <!-- Kampus 1: UNDIP -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('undip')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Sekolah Vokasi UNDIP</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-undip" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-undip" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D4 Rekayasa Perancang Mekanik</li>
+                                        <li>D4 Teknologi Rekayasa Kimia Industri</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UNHAS -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('unhas')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Universitas Hasanuddin (UNHAS)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-unhas" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-unhas" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>S1 Agribisnis</li>
+                                        <li>S1 Agroteknologi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UNJA -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('unja')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Universitas Jambi (UNJA)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-unja" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-unja" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D3 Analisis Kimia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UNLAM -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('unlam')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Universitas Lambung Mangkurat (UNLAM)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-unlam" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-unlam" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>S1 Agroteknologi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UTU -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('utu')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Universitas Teuku Umar (UTU)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-utu" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-utu" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>S1 Agroteknologi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POLITANI -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('politani')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Politeknik Pertanian Ngr. Samarinda</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-politani" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-politani" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D4 Pengelolaan Perkebunan</li>
+                                        <li>D3 Budidaya Tanaman Perkebunan</li>
+                                        <li>D3 Teknologi Hasil Perkebunan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PNL -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('pnl')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Poltek Negeri Lhokseumawe (PNL)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-pnl" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-pnl" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D3 Teknologi Kimia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ATIM -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('atim')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Politeknik ATI Makassar (ATIM)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-atim" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-atim" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D3 Teknik Manufaktur Industri Agro</li>
+                                        <li>D3 Otomasi Sistem Permesinan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ATIP -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('atip')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Politeknik ATI Padang (ATIP)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-atip" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-atip" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D3 Teknik Kimia Bahan Nabati</li>
+                                        <li>D3 Manajemen Logistik Industri Agro</li>
+                                        <li>D3 Analisis Kimia</li>
+                                        <li>D3 Teknik Industri Agro</li>
+                                        <li>D4 Teknologi Rekayasa Bioproses Energi Terbarukan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PTKI -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('ptki')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">Politeknik Teknologi Kimia Ind. (PTKI)</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-ptki" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-ptki" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D3 Teknik Kimia</li>
+                                        <li>D3 Teknik Mekanika</li>
+                                        <li>D3 Agribisnis Kelapa Sawit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POLBANTAN Manokwari -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('polbantan-manokwari')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">POLBANTAN Manokwari</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-polbantan-manokwari" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-polbantan-manokwari" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D4 Teknologi Produksi Tanaman Perkebunan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POLBANTAN Medan -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('polbantan-medan')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">POLBANTAN Medan</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-polbantan-medan" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-polbantan-medan" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D4 Teknologi Produksi Tanaman Perkebunan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AKOM -->
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl overflow-hidden transition-all duration-200 md:col-span-2 lg:col-span-1 lg:col-start-1">
+                            <button class="w-full flex items-center justify-between p-5 text-left hover:bg-emerald-800 focus:outline-none" onclick="toggleKampus('akom')">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                                    <span class="font-bold text-lg text-white">AKOM-BANTAENG</span>
+                                </div>
+                                <i data-lucide="chevron-down" id="icon-kampus-akom" class="h-5 w-5 text-emerald-300 flex-shrink-0 transition-transform duration-300"></i>
+                            </button>
+                            <div id="content-kampus-akom" class="px-5 max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-emerald-900/40">
+                                <div class="pb-5 pt-1 border-t border-emerald-700/50 mt-1">
+                                    <p class="text-amber-200 text-sm font-medium mb-2 mt-3">Program Studi Tersedia:</p>
+                                    <ul class="list-disc list-inside text-emerald-100 text-sm space-y-1">
+                                        <li>D2 Teknik Perawatan Mesin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <h3 class="font-bold text-xl mb-2">ITSI Medan</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed">Institut Teknologi Sawit Indonesia (ITSI). Fokus penuh pada pengembangan sains & teknologi kelapa sawit di Sumatera.</p>
                 </div>
 
-                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
-                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="book" class="h-6 w-6 text-amber-400"></i>
+                <!-- TAB 2: Kampus Unggulan -->
+                <div id="tab-unggulan" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="star" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik LPP Yogyakarta</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="star" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Institut Pertanian Stiper (INSTIPER)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="star" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Kelapa Sawit Citra Widya Edukasi (CWE)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="star" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Institut Teknologi Sawit Indonesia (ITSI)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="star" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Inst. Teknologi Perkebunan Pelalawan (ITP2I)</span>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Poltek Kelapa Sawit CWE</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed">Citra Widya Edukasi (CWE) Bekasi. Pilihan yang sangat tepat di Jawa Barat untuk pendidikan vokasi industri sawit.</p>
                 </div>
 
-                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
-                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="map-pin" class="h-6 w-6 text-amber-400"></i>
+                <!-- TAB 3: Kampus Cepat Kerja -->
+                <div id="tab-vokasi" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Akademi Komunitas Perkebunan Yogyakarta (AKPY)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Kampar</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Caltex Riau (PCR)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Jambi (POLJAM)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Aceh</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Aceh Selatan (POLTAS)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Indonesia Venezuela (POLIVEN)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik YKPN</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Bombana (POLINA)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Politeknik Kutaraja</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3 md:col-span-2 lg:col-span-1 lg:col-start-1">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Institut Teknologi Sains Bandung (ITSB)</span>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Politeknik Kampar</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed">Berada di Provinsi Riau. Kampus strategis yang berlokasi tepat di jantung pusat industri sawit Sumatera.</p>
                 </div>
 
-                <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-2xl p-6 hover:bg-emerald-800 transition-colors">
-                    <div class="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="award" class="h-6 w-6 text-amber-400"></i>
+                <!-- TAB 4: Swasta Potensial -->
+                <div id="tab-swasta" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Borobudur</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Taman Siswa (UNITAS) Padang</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Lancang Kuning (UNILAK)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Prima Indonesia (UNPRI)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Nahdlatul Ulama (UNU) Kalimantan Barat</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Pasir Pengaraian (UPP)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Islam Sumatera Utara (UISU)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Muhammadyah Sumatera Barat (UMSB)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Sulawesi Tenggara (UNSULTRA)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Tjut Nyak Dhien (UTND)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Koperasi Indonesia (IKOPIN)</span>
+                        </div>
+                        <div class="bg-emerald-800/50 backdrop-blur-sm border border-emerald-700 rounded-xl p-5 flex items-center gap-3">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-amber-400 flex-shrink-0"></i>
+                            <span class="font-bold text-lg text-white">Universitas Tunas Pembangunan (UTP)</span>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Sekolah Vokasi IPB</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed">Menyediakan program agribisnis dan teknologi pertanian yang sudah diakui kualitasnya di tingkat nasional maupun internasional.</p>
                 </div>
 
-                <div class="bg-emerald-900/50 backdrop-blur-sm border border-emerald-700/50 border-dashed rounded-2xl p-6 flex flex-col justify-center items-center text-center">
-                    <i data-lucide="plus-circle" class="h-10 w-10 text-emerald-400 mb-3 opacity-70"></i>
-                    <h3 class="font-bold text-lg mb-1">Dan Puluhan Kampus Lainnya</h3>
-                    <p class="text-emerald-200 text-sm">Tersebar dari Aceh hingga Papua!</p>
-                </div>
+            </div>
+
+            <!-- Note -->
+            <div class="mt-12 text-center">
+                 <p class="text-emerald-200/80 text-sm">*Beberapa program studi mungkin bertambah atau mengalami penyesuaian dari penyelenggara beasiswa BPDPKS.</p>
             </div>
         </div>
     </section>
@@ -305,7 +672,7 @@
                         </li>
                         <li class="flex items-start gap-4">
                             <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
-                            <span class="text-slate-700">Grup diskusi dan jaringan pendampingan 24/7 bersama Awardee.</span>
+                            <span class="text-slate-700">Akses grup diskusi dan sesi pendampingan interaktif bersama Awardee.</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <div class="bg-emerald-100 p-1.5 rounded-full mt-0.5"><i data-lucide="check" class="h-4 w-4 text-emerald-600 stroke-[3]"></i></div>
@@ -469,6 +836,50 @@
                 iconDown.classList.remove('hidden');
                 iconUp.classList.add('hidden');
             }
+        }
+
+        // Script untuk mengatur buka-tutup list Kampus dan Jurusan
+        function toggleKampus(id) {
+            const content = document.getElementById('content-kampus-' + id);
+            const icon = document.getElementById('icon-kampus-' + id);
+
+            if (content.classList.contains('max-h-0')) {
+                // Buka list jurusan (menggunakan height yang sangat besar untuk menampung banyak list)
+                content.classList.remove('max-h-0');
+                content.classList.add('max-h-[800px]'); 
+                icon.classList.add('rotate-180');
+            } else {
+                // Tutup list jurusan
+                content.classList.add('max-h-0');
+                content.classList.remove('max-h-[800px]');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Script untuk mengatur Tab Kategori Kampus
+        function openTab(tabId) {
+            // Sembunyikan semua tab content
+            const panes = document.querySelectorAll('.tab-pane');
+            panes.forEach(pane => {
+                pane.classList.remove('block');
+                pane.classList.add('hidden');
+            });
+
+            // Reset style semua tombol tab (kembali ke default/non-aktif)
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-amber-950', 'font-bold');
+                btn.classList.add('bg-emerald-800/50', 'text-emerald-100', 'hover:bg-emerald-700', 'border', 'border-emerald-600', 'font-medium');
+            });
+
+            // Tampilkan tab content yang dipilih
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('tab-' + tabId).classList.add('block');
+
+            // Beri style aktif (kuning) ke tombol yang baru diklik
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-emerald-800/50', 'text-emerald-100', 'hover:bg-emerald-700', 'border', 'border-emerald-600', 'font-medium');
+            activeBtn.classList.add('bg-amber-500', 'text-amber-950', 'font-bold');
         }
     </script>
 </body>
